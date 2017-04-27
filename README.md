@@ -85,13 +85,14 @@ public class AuthConstants {
 </pre></code>
 
 ### 5最后需要在onDestroy里面释放
- @Override<br>
-    protected void onDestroy() {<br>
-        super.onDestroy();<br>
-        IAuthMangerImpl.getInstance().release();<br>
-    }<br>
+<pre><code>
+@Override
+    protected void onDestroy() {
+        super.onDestroy();
+        IAuthMangerImpl.getInstance().release();
+    }</pre></code>
 
-
-具体的可以参考demo
+### 有问题可以联系:
+renlei@xiaomi.com
  
  
