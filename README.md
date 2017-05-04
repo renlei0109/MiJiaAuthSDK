@@ -18,12 +18,12 @@ IAuthMangerImpl.getInstance().init(AuthActivity.this);///初始化
 ### 3 发起授权IAuthMangerImpl.getInstance().callAuth（final Context context, final Bundle data, final int requestCode, IAuthResponse response）
 **requestCode**对应的是要请求哪种授权<br>
 * 1)如果请求的是给设备进行授权则传入AuthCode.REQUEST_CODE_CALL_AUTH_FOR_DEVICE(设备授权之前，该小米账户需要已经绑定该设备)<br>
-* 2)如果请求的是给app进行授权，则传入的是AuthCode.REQUEST_CODE_CALL_AUTH_FOR_APP<br>
+
 
 
 **Bundle data**对应的是需要传入的参数
- 如果是app授权的话，只需要传入AuthConstants.EXTRA_APPLICATION_ID，一个参数即可，该参数需要到开放平台申请。<br>
- 如果设备授权的话，你还需要传入设备的idAuthConstants.EXTRA_DEVICE_DID。<br>
+ 如果是设备授权的话，需要传入AuthConstants.EXTRA_APPLICATION_ID，，该参数需要到开放平台申请。<br>
+ 同时你还需要传入设备的idAuthConstants.EXTRA_DEVICE_DID。<br>
  例如<br>
  
  <pre><code>
